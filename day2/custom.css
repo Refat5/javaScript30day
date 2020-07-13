@@ -1,0 +1,81 @@
+
+.topFixedBanner{
+    background-image: url("background.jpg");
+    min-height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+
+
+ }
+ .body
+ {
+ 	font-size:  2rem;
+ 	display: flex;
+ 	flex: 2;
+ 	min-height: 100vh;
+ 	align-items: center;
+
+ }
+
+ .clock{
+ 	width: 30rem;
+ 	height: 30rem;
+ 	border: 20px solid white;
+ 	background-color: red;
+ 	border-radius: 60% auto;
+ 	margin: 60px auto;
+ 	position: relative;
+ 	    border-radius: 60%;
+ 	padding: 2rem;
+ 	box-shadow: 0 0 0px 3px rgba(0,0,0,0.1),
+ 	inset 0 0 0 3px #efefef,
+ 	inset 0 0 0 10px green,
+
+ }
+
+ .clock-face{
+ 	position: relative;
+ 	width: 100%;
+ 	height: 100%;
+ 	transform: translateY(-3px);
+ }
+ .hand1{
+ 	width: 50%;
+ 	height: 22px;
+ 	background:white;
+ 	position: absolute;
+ 	top: 50%;
+ 	transform-origin:  100%;
+ 	transform: rotate(90deg);
+ 	transition: all 0.05s;
+ 	transition-timing-function: cubic-bezier(0.1, 2.5, 0.57, 1);
+
+ }
+  .hand2{
+ 	width: 50%;
+ 	height: 20px;
+ 	background:yellow;
+ 	position: absolute;
+ 	top: 50%;
+ 	transform-origin:  100%;
+ 	transform: rotate(90deg);
+ 	transition: all 0.05s;
+ 	transition-timing-function: cubic-bezier(0.1, 2.5, 0.57, 1);
+
+ }
+  .hand3{
+ 	width: 50%;
+ 	height: 12px;
+ 	background:gray;
+ 	position: absolute;
+ 	top: 50%;
+ 	transform-origin:  100%;
+ 	transform: rotate(90deg);
+ 	transition: all 0.05s;
+ 	transition-timing-function: cubic-bezier(0.1, 2.5, 0.57, 1);
+
+ }

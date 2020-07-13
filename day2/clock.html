@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>clock</title>
+	<link rel="stylesheet" type="text/css" href="custom.css">
+</head>
+<body>
+	<div class="topFixedBanner">
+		<div class="clock">
+		<div class="clock-face">
+			<div class="hand1 hour-h"></div>
+			<div class="hand2 min-h"></div>
+			<div class="hand3 second-h"></div>
+
+		</div>
+	</div>
+	</div>
+	
+
+
+<script type="text/javascript">
+
+	const secondh = document.querySelector('.second-h');
+	const minh = document.querySelector('.min-h');
+	const hourh = document.querySelector('.hour-h');
+
+	function setDate() {
+		const now = new Date();
+
+		const second = now.getSeconds();
+		const secondDegrees = ((second / 60) * 360) + 90;
+		secondh.style.transform = `rotate(${secondDegrees}deg)`;
+
+		const min = now.getMinutes();
+		const minDegrees = ((min / 60) * 360) + 90;
+		minh.style.transform = `rotate(${minDegrees}deg)`;
+
+		const hour = now.getHours();
+		const hourDegrees = ((hour / 60) * 360) + 90;
+		hourh.style.transform = `rotate(${hourDegrees}deg)`;
+
+		console.log(second);
+
+	}
+
+setInterval(setDate, 1000);
+
+</script>
+</body>
+</html>
