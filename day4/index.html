@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array in js</title>
+</head>
+<body>
+	<div class="hello">
+
+	<div id="p-logo" role="banner">
+		<a title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation">
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	
+<nav id="p-interaction" class="vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation">
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [Alt+Shift+r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation">
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Category:Boulevards_jn_paris" title="List of all English Wikipedia pages containing links to this page [Alt+Shift+j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Category:Boulevards_jn_paris" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [Alt+Shift+u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [Alt+Shift+q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/w/index.php?title=Category:Boulevards_jn_paris&amp;printable=yes" rel="alternate" title="Printable version of this page [Alt+Shift+p]" accesskey="p">Printable version</a></li><li id="t-info"><a href="/w/index.php?title=Category:Boulevards_jn_paris&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation"><button class="uls-settings-trigger" title="Language settings"></button>
+	<h3 id="p-lang-label">Languages</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"></ul>
+		<div class="after-portlet after-portlet-lang"><span class="uls-after-portlet-link"></span></div>
+	</div>
+</nav>
+
+
+
+		
+	</div>
+	<script type="text/javascript">
+		
+
+		const inventors = [
+		{ first: 'Refat', last: 'goodBoy',year: 1552,passed:121 },
+		{ first: 'sefat', last: 'vsf',year: 452,passed:121 },
+		{ first: 'tanvir', last: 'Boy',year: 1562,passed:121 },
+		{ first: 'komol', last: 'dadBoy',year: 1600,passed:5547 },
+		{ first: 'jubair', last: 'Boy',year: 45,passed:542 },
+		{ first: 'hey', last: 'Boy',year: 2000,passed:54 },
+		{ first: 'hrllo', last: 'dfgdf',year: 2045,passed:24 },
+		{ first: 'ghd', last: 'fgddg',year: 452,passed:214 },
+		{ first: 'tumi', last: 'dfgBoy',year: 2015,passed:121 },
+		{ first: 'ami', last: 'dgf',year: 2021,passed:121 },
+		{ first: 'Refat', last: 'goodBdfggoy',year: 21,passed:12 },
+
+		];
+
+		const pepole = ['abdur, Rahim','abdul, ahad','abdul, komol','abdul, halim','abdul, ahad','abdul, ahad','abdul, ahad','abdul, ahad','abdul, drg','abdul, tared','tavr, ras','abdsrfeul, dfsd','gdf, ahad','abdul, dfg','abdul, dfg','gdf, ahad','abdul, ahad','abdul, dfg','abdul, ahad','sgdf, gsd','abdul, ahad','abdul, ahad','any, dg','gsdf, ahad','abdul, ahad','gs, ahad','rtsc, ahad','gdf, ahad','ertran, ahad','abdul, gdf','gsd, dgf',];
+
+//Array.prototype.filter()
+//1. Filter the list of invertors for those who were bron in 2000
+		const twenty = inventors.filter(inventor => (inventor.year >= 2000 && inventor.year <2030))
+			
+		console.table(twenty);
+
+//Array.prototype.map()
+//2. Gobe is am array of the inventory first and last names
+const fullName = inventors.map(inventor => inventor.first + '' + inventor.last);
+  console.log(fullName);		
+
+
+//Array.prototype.sort()
+//3. Sortt the inventors by bintdate, oldest to youngest
+/*const orderd = inventors.sort(function(a,b){
+	if (a.year > b.year) {
+
+		return 1;
+	}
+	else {
+		return -1;
+	}
+});*/
+
+const orderd = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
+console.table(orderd)
+
+//Array.prototype.reduce()
+//4. How many years did all the inventors live? 
+
+const totalYears = inventors.reduce((total,inventor)=> {
+	 return total + (inventor.passed - inventor.year);
+
+	},0);
+
+console.log(totalYears)
+
+
+
+//5.sort the inventors by years lived
+
+const oldest = inventors.sort(function(a,b){
+	const lastGuy = a.passed - a.year;
+	const nextGuy = b.passed -b.year;
+	return lastGuy > nextGuy ? -1 : 1;
+});
+console.table(oldest)
+
+//6. create a list of boulevards in paris that contain 'de' anywhere inb= the name 
+
+/*const category = document.querySelector('.hello');
+const links = Array.from(category.querySelector('a'));
+const de = links .map(link => link.textConent)
+                 .filter(streetName => streetName.includes('de'));*/
+
+
+
+//7. sort Exercise 
+//sort the pepole alpahabetically by last name
+const alpha = pepole.sort((lastOne, nextOne) =>
+{
+	const [alast, afirst] = lastOne.split(',');
+	const [blast, bfirst] = nextOne.split(',');
+	return alast > blast ? 1 : -1;
+});
+console.log(alpha);
+
+
+// reduce exercise 
+//sum up the instances of each of thes
+
+
+const data = ['car','car','track','track','track','track','car','car','car','van','van','van','car']
+const transport = data.reduce(function(obj,item){
+	if (!obj[item]) {
+		obj[item] = 0;
+	}
+	obj[item]++;
+	return obj;
+
+},{});
+console.log(transport);
+	</script>
+
+</body>
+</html>
